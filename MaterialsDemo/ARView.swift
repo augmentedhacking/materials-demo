@@ -83,7 +83,6 @@ class SimpleARView: ARView {
         configuration.environmentTexturing = .automatic
         arView.renderOptions = [.disableDepthOfField, .disableMotionBlur]
 
-        // Required to enable general occulusion.
         if ARWorldTrackingConfiguration.supportsSceneReconstruction(.mesh) {
             configuration.sceneReconstruction = .mesh
         }
@@ -346,19 +345,6 @@ class SimpleARView: ARView {
         } catch {
           print("Error loading audio file")
         }
-
-
-        var soundEffect: AVAudioPlayer?
-        let path = Bundle.main.path(forResource: "example.mp3", ofType:nil)!
-        let url = URL(fileURLWithPath: path)
-
-        do {
-            soundEffect = try AVAudioPlayer(contentsOf: url)
-            soundEffect?.play()
-        } catch {
-            // couldn't load file
-        }
-
     }
 }
 
