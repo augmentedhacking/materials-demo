@@ -13,9 +13,9 @@
 		6A836E512B064CBD00E323D0 /* MaterialsDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A836E4D2B064CBD00E323D0 /* MaterialsDemoApp.swift */; };
 		6A836E522B064CBD00E323D0 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A836E4E2B064CBD00E323D0 /* ViewModel.swift */; };
 		6A836E532B064CBD00E323D0 /* ARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A836E4F2B064CBD00E323D0 /* ARView.swift */; };
-		6A836E542B064CBD00E323D0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A836E502B064CBD00E323D0 /* ContentView.swift */; };
 		6A836E572B064EEF00E323D0 /* chair.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 6A836E562B064EEF00E323D0 /* chair.usdz */; };
 		6A836E592B064F5700E323D0 /* EntityHelperMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A836E582B064F5700E323D0 /* EntityHelperMethods.swift */; };
+		6AD754212B18D66400580486 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD754202B18D66400580486 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,9 +26,9 @@
 		6A836E4D2B064CBD00E323D0 /* MaterialsDemoApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialsDemoApp.swift; sourceTree = "<group>"; };
 		6A836E4E2B064CBD00E323D0 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		6A836E4F2B064CBD00E323D0 /* ARView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARView.swift; sourceTree = "<group>"; };
-		6A836E502B064CBD00E323D0 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = "../../shader-demo/ShaderDemo/ContentView.swift"; sourceTree = "<group>"; };
 		6A836E562B064EEF00E323D0 /* chair.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = chair.usdz; sourceTree = "<group>"; };
 		6A836E582B064F5700E323D0 /* EntityHelperMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityHelperMethods.swift; sourceTree = "<group>"; };
+		6AD754202B18D66400580486 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +63,8 @@
 			children = (
 				6A836E4D2B064CBD00E323D0 /* MaterialsDemoApp.swift */,
 				6A836E4E2B064CBD00E323D0 /* ViewModel.swift */,
-				6A836E502B064CBD00E323D0 /* ContentView.swift */,
 				6A836E4F2B064CBD00E323D0 /* ARView.swift */,
+				6AD754202B18D66400580486 /* ContentView.swift */,
 				6A836E582B064F5700E323D0 /* EntityHelperMethods.swift */,
 				6A836E3C2B064C5900E323D0 /* Assets.xcassets */,
 				6A836E482B064C9900E323D0 /* Textures */,
@@ -172,8 +172,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A836E532B064CBD00E323D0 /* ARView.swift in Sources */,
+				6AD754212B18D66400580486 /* ContentView.swift in Sources */,
 				6A836E512B064CBD00E323D0 /* MaterialsDemoApp.swift in Sources */,
-				6A836E542B064CBD00E323D0 /* ContentView.swift in Sources */,
 				6A836E522B064CBD00E323D0 /* ViewModel.swift in Sources */,
 				6A836E592B064F5700E323D0 /* EntityHelperMethods.swift in Sources */,
 			);
