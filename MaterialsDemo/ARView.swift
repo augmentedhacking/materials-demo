@@ -83,14 +83,29 @@ class SimpleARView: ARView {
         configuration.environmentTexturing = .automatic
         arView.renderOptions = [.disableDepthOfField, .disableMotionBlur]
         arView.session.run(configuration)
-
+        
         // FILTER:
         arView.renderCallbacks.prepareWithDevice = { [weak self] device in
             self?.context = CIContext(mtlDevice: device)
             self?.device = device
         }
+        
+        // Add a gesture recognizer to detect taps.
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
+        self.addGestureRecognizer(tapGesture)
     }
     
+    @objc func handleTap(_ sender: UITapGestureRecognizer) {
+        if sender.state == .ended {
+            let tapLocation = sender.location(in: arView)
+            
+            guard let hitEntity = self.entity(at: tapLocation) else { return }
+            
+            if hitEntity.name == "chair" {
+                playAudioFileFor(entity: chair)
+            }
+        }
+    }
     
     func setupSubscriptions() {
         // Called every frame.
@@ -150,8 +165,8 @@ class SimpleARView: ARView {
                 self?.checkerBoardPlane.isEnabled = enabled
             }
             .store(in: &subscriptions)
-
-
+        
+        
         // Filters.
         
         viewModel.$filtersIdx
@@ -253,10 +268,10 @@ class SimpleARView: ARView {
     // FILTER:
     func filter(_ context: ARView.PostProcessContext) {
         let inputImage = CIImage(mtlTexture: context.sourceColorTexture)!
-
+        
         // Change filter here.
         // Reference: https://developer.apple.com/documentation/coreimage/processing_an_image_using_built-in_filters
-
+        
         // Reference to filter selected.
         var selectedFilter: CIFilter!
         
@@ -301,5 +316,22 @@ class SimpleARView: ARView {
         destination.isFlipped = false
         
         _ = try? self.context?.startTask(toRender: selectedFilter.outputImage!, to: destination)
+    }
+
+    
+    // Add audio file to entity.
+    func playAudioFileFor(entity: Entity) {
+        do {
+          let resource = try AudioFileResource.load(named: "piano-scale.m4a",
+                                                    in: nil,
+                                                    inputMode: .spatial,
+                                                    loadingStrategy: .preload,
+                                                    shouldLoop: false)
+          
+          let audioController = entity.prepareAudio(resource)
+          audioController.play()
+        } catch {
+          print("Error loading audio file")
+        }
     }
 }

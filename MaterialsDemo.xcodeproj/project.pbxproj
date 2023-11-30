@@ -16,6 +16,7 @@
 		6A836E572B064EEF00E323D0 /* chair.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 6A836E562B064EEF00E323D0 /* chair.usdz */; };
 		6A836E592B064F5700E323D0 /* EntityHelperMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A836E582B064F5700E323D0 /* EntityHelperMethods.swift */; };
 		6AD754212B18D66400580486 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD754202B18D66400580486 /* ContentView.swift */; };
+		6AD754242B18D6D800580486 /* piano-scale.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 6AD754232B18D6D800580486 /* piano-scale.m4a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		6A836E562B064EEF00E323D0 /* chair.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = chair.usdz; sourceTree = "<group>"; };
 		6A836E582B064F5700E323D0 /* EntityHelperMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityHelperMethods.swift; sourceTree = "<group>"; };
 		6AD754202B18D66400580486 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6AD754232B18D6D800580486 /* piano-scale.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "piano-scale.m4a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				6A836E3C2B064C5900E323D0 /* Assets.xcassets */,
 				6A836E482B064C9900E323D0 /* Textures */,
 				6A836E552B064EE300E323D0 /* Models */,
+				6AD754222B18D6C700580486 /* Audio */,
 				6A836E3E2B064C5900E323D0 /* Preview Content */,
 			);
 			path = MaterialsDemo;
@@ -96,6 +99,14 @@
 				6A836E562B064EEF00E323D0 /* chair.usdz */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		6AD754222B18D6C700580486 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				6AD754232B18D6D800580486 /* piano-scale.m4a */,
+			);
+			path = Audio;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +170,7 @@
 			files = (
 				6A836E4C2B064CA700E323D0 /* checker.png in Resources */,
 				6A836E572B064EEF00E323D0 /* chair.usdz in Resources */,
+				6AD754242B18D6D800580486 /* piano-scale.m4a in Resources */,
 				6A836E402B064C5900E323D0 /* Preview Assets.xcassets in Resources */,
 				6A836E3D2B064C5900E323D0 /* Assets.xcassets in Resources */,
 			);
